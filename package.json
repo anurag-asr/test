@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "main":"index.js",
   "dependencies": {
     "@scaleflex/icons": "^2.10.17",
     "@scaleflex/ui": "^2.10.23",
