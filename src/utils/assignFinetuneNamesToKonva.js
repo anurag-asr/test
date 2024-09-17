@@ -1,3 +1,5 @@
+import Konva from "konva";
+
 const assignFinetuneNamesToKonva = () => {
   Object.keys(Konva.Filters).forEach((key) => Konva.Filters[key].finetuneName = key)
 }

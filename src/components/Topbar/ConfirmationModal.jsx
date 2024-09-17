@@ -24,10 +24,7 @@ const ConfirmationModal = ({ children, isReset }) => {
 
   const WarningIcon = () => <Warning color={theme.palette.warning} size={25} />;
 
-  //   Hacky solution for avoiding (zoom & image info) components go to right if we have no close button.
-  if (typeof onClose !== 'function' && !isReset) {
-    return <span />;
-  }
+
 
   const cancelModal = () => {
     setIsModalOpened(false);
@@ -48,6 +45,11 @@ const ConfirmationModal = ({ children, isReset }) => {
     onClose(CLOSING_REASONS.CLOSE_BUTTON, haveNotSavedChanges);
     dispatchReset();
   };
+  
+    //   Hacky solution for avoiding (zoom & image info) components go to right if we have no close button.
+    if (typeof onClose !== 'function' && !isReset) {
+      return <span />;
+    }
 
   return (
     <>

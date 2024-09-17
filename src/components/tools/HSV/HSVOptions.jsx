@@ -27,13 +27,13 @@ const MAX_VALUE = {
 };
 
 const sliderStyle = { padding: 0, margin: 0 };
-const isPhoneScreen = usePhoneScreen();
 
 const HSVOptions = ({ t }) => {
   const [finetuneProps, setFinetuneProps] = useFinetune(
     Konva.Filters.HSV,
     DEFAULT_VALUE,
   );
+const isPhoneScreen = usePhoneScreen();
 
   const changeValue = (name, value) => {
     setFinetuneProps({
