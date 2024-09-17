@@ -1,7 +1,17 @@
-/** Internal Dependencies */
-import FilerobotImageEditor from 'components/AssemblyPoint';
-import { TABS_IDS, TOOLS_IDS } from 'utils/constants';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-export { TABS_IDS as TABS, TOOLS_IDS as TOOLS };
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-export default FilerobotImageEditor;
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
